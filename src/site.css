@@ -1,0 +1,654 @@
+/* ===================== Hero ===================== */
+
+.hero {
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(120% 140% at 50% 20%, #2d5a8c 0%, var(--ink) 45%, var(--ink-deep) 100%);
+  color: var(--paper);
+  padding: 96px var(--edge) 64px;
+  text-align: center;
+}
+
+.hero-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 640px;
+  position: relative;
+}
+
+.hero-inner::before {
+  content: '✦';
+  font-size: 24px;
+  color: var(--gold);
+  opacity: 0.6;
+  margin: 12px 0;
+}
+
+.hero-inner::after {
+  content: '✦';
+  font-size: 24px;
+  color: var(--rose);
+  opacity: 0.6;
+  margin: 12px 0;
+}
+
+.hero-medal {
+  position: relative;
+  width: clamp(160px, 32vw, 240px);
+  height: clamp(120px, 32vw, 240px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 28px 0 32px;
+}
+
+.hero-ring {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.hero-ring-path {
+  stroke-dasharray: 100;
+  stroke-dashoffset: 100;
+  animation: draw-ring 1.6s ease-out 0.3s forwards;
+}
+
+@keyframes draw-ring {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-ring-path {
+    animation: none;
+    stroke-dashoffset: 0;
+  }
+}
+
+.hero-number {
+  position: absolute;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(64px, 12vw, 96px);
+  color: var(--gold-light);
+  line-height: 1;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.hero-name {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-style: italic;
+  font-size: clamp(28px, 4vw, 38px);
+  margin: 0 0 18px;
+  color: var(--paper);
+}
+
+.hero-name-script {
+  font-family: var(--font-script);
+  font-style: normal;
+  font-weight: 700;
+  font-size: clamp(48px, 8vw, 72px);
+  color: var(--gold-light);
+  margin: 0 0 8px;
+}
+
+.hero-tagline {
+  font-size: 19px;
+  color: var(--paper-dim);
+  max-width: 46ch;
+  margin: 0 0 48px;
+}
+
+.hero-scroll {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: var(--gold-light);
+  font-family: var(--font-label);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.hero-scroll-line {
+  width: 1px;
+  height: 36px;
+  background: var(--gold);
+  opacity: 0.6;
+}
+
+/* ===================== Sections ===================== */
+
+.section {
+  padding: 96px var(--edge);
+  position: relative;
+}
+
+.section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 1px;
+  background: linear-gradient(to right, transparent, rgba(201, 164, 100, 0.3), transparent);
+  opacity: 0;
+}
+
+#citacoes::before {
+  opacity: 1;
+}
+
+#convite::before {
+  opacity: 1;
+}
+
+.section-light {
+  background: var(--paper);
+}
+
+.section-dark {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.section-head {
+  max-width: var(--container);
+  margin: 0 auto 56px;
+  text-align: center;
+  position: relative;
+}
+
+.section-head::before {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--gold), transparent);
+  margin: 0 auto 16px;
+}
+
+.section-head::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--rose), transparent);
+  margin: 0 auto 16px;
+}
+
+.section-head .eyebrow {
+  display: block;
+  margin: 14px 0 10px;
+}
+
+.section-title {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(28px, 4vw, 40px);
+  margin: 0;
+  color: var(--ink);
+  text-shadow: 2px 2px 0 rgba(74, 28, 38, 0.08);
+  letter-spacing: 0.02em;
+}
+
+.section-title-light {
+  color: var(--paper);
+}
+
+/* ===================== Galeria ===================== */
+
+.galeria-scroll {
+  max-width: var(--container);
+  margin: 0 auto;
+  display: flex;
+  gap: 24px;
+  overflow-x: auto;
+  padding-bottom: 12px;
+  scroll-snap-type: x proximity;
+}
+
+.galeria-item {
+  flex: 0 0 clamp(220px, 28vw, 300px);
+  margin: 0;
+  scroll-snap-align: start;
+}
+
+.galeria-frame {
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  border: 1px solid var(--gold);
+  background: var(--paper-dim);
+}
+
+.galeria-frame-album {
+  position: relative;
+  padding: 10px;
+  border: 1px solid var(--gold);
+  outline: 1px solid var(--gold);
+  outline-offset: -6px;
+  background: #fffdf8;
+  box-shadow: 0 6px 18px rgba(22, 36, 31, 0.12);
+}
+
+.galeria-frame-album img {
+  filter: sepia(0.35) saturate(1.05) contrast(1.02);
+}
+
+.galeria-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.galeria-item figcaption {
+  margin-top: 14px;
+  font-family: var(--font-label);
+  font-size: 13px;
+  letter-spacing: 0.04em;
+  color: var(--charcoal);
+  text-align: center;
+}
+
+/* ===================== Mensagens ===================== */
+
+.mensagens-grid {
+  max-width: var(--container);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 28px;
+}
+
+.mensagem-card {
+  position: relative;
+  background: var(--ink-deep);
+  border: 2px solid var(--wine);
+  border-left: 4px solid var(--rose);
+  padding: 32px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  box-shadow: 0 8px 24px rgba(169, 112, 112, 0.12);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mensagem-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(212, 165, 165, 0.2);
+}
+
+.mensagem-aspas {
+  position: absolute;
+  top: 6px;
+  left: 20px;
+  font-family: var(--font-display);
+  font-size: 56px;
+  line-height: 1;
+  color: var(--gold);
+  opacity: 0.5;
+}
+
+.mensagem-texto {
+  font-style: italic;
+  font-size: 18px;
+  line-height: 1.7;
+  margin: 0;
+  color: var(--paper);
+}
+
+.mensagem-autor {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  border-top: 1px solid rgba(201, 164, 100, 0.35);
+  padding-top: 14px;
+}
+
+.mensagem-nome {
+  font-family: var(--font-display);
+  font-style: italic;
+  color: var(--gold-light);
+}
+
+.mensagem-relacao {
+  font-family: var(--font-label);
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--paper-dim);
+}
+
+/* ===================== Convite ===================== */
+
+.convite-card {
+  position: relative;
+  max-width: 520px;
+  margin: 0 auto;
+  border: 2px solid var(--gold);
+  outline: 1px solid var(--wine);
+  outline-offset: 8px;
+  padding: 48px clamp(24px, 6vw, 56px);
+  text-align: center;
+  background: #fffdf8;
+  box-shadow: 
+    inset 0 0 0 1px var(--gold),
+    0 12px 32px rgba(74, 28, 38, 0.15);
+}
+
+.convite-corner {
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  border: 2px solid var(--wine);
+  opacity: 0.75;
+}
+
+.convite-corner-tl {
+  top: 10px;
+  left: 10px;
+  border-right: none;
+  border-bottom: none;
+}
+
+.convite-corner-tr {
+  top: 10px;
+  right: 10px;
+  border-left: none;
+  border-bottom: none;
+}
+
+.convite-corner-bl {
+  bottom: 10px;
+  left: 10px;
+  border-right: none;
+  border-top: none;
+}
+
+.convite-corner-br {
+  bottom: 10px;
+  right: 10px;
+  border-left: none;
+  border-top: none;
+}
+
+.convite-detalhes {
+  margin: 0 0 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.convite-linha {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.convite-linha dt {
+  font-family: var(--font-label);
+  font-size: 12px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.convite-linha dd {
+  margin: 0;
+  font-size: 20px;
+  color: var(--ink);
+}
+
+.convite-endereco {
+  font-size: 16px;
+  color: #6b6b66;
+}
+
+.convite-observacao {
+  font-size: 15px;
+  color: #6b6b66;
+  font-style: italic;
+  margin: 0 0 28px;
+}
+
+.convite-rsvp {
+  display: inline-block;
+  border: 2px solid var(--wine);
+  color: var(--wine);
+  text-decoration: none;
+  padding: 14px 40px;
+  font-family: var(--font-label);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-size: 13px;
+  transition: all 0.3s ease;
+  background: transparent;
+}
+
+.convite-rsvp:hover {
+  background: var(--wine);
+  color: var(--paper);
+  box-shadow: 0 8px 16px rgba(74, 28, 38, 0.25);
+}
+
+/* ===================== Footer ===================== */
+
+.site-footer {
+  background: var(--ink-deep);
+  color: var(--paper-dim);
+  text-align: center;
+  padding: 48px var(--edge) 56px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  font-family: var(--font-label);
+  font-size: 13px;
+  letter-spacing: 0.08em;
+}
+
+/* ===================== Curiosidades ===================== */
+
+.curiosidades-grid {
+  max-width: var(--container);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+@media (max-width: 768px) {
+  .curiosidades-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .curiosidades-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.curiosidade-card {
+  position: relative;
+  background: rgba(255, 255, 255, 0.08);
+  border-left: 4px solid var(--rose);
+  border-top: 1px solid rgba(212, 165, 165, 0.2);
+  border-right: 1px solid rgba(212, 165, 165, 0.2);
+  border-bottom: 1px solid rgba(212, 165, 165, 0.2);
+  padding: 32px 24px;
+  transition: all 0.3s ease;
+}
+
+.curiosidade-card:hover {
+  box-shadow: 0 8px 24px rgba(212, 165, 165, 0.15);
+  transform: translateY(-4px);
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.curiosidade-titulo {
+  font-family: var(--font-display);
+  font-size: clamp(18px, 3vw, 24px);
+  color: var(--paper);
+  margin: 0 0 12px;
+  font-weight: 600;
+}
+
+.curiosidade-descricao {
+  font-size: 16px;
+  color: var(--paper-dim);
+  line-height: 1.6;
+  margin: 0 0 16px;
+}
+
+.curiosidade-ornament {
+  font-size: 20px;
+  color: var(--rose);
+  opacity: 0.6;
+  text-align: center;
+}
+
+/* ===================== Citações ===================== */
+
+/* ===================== Citações ===================== */
+
+.citacoes-container {
+  max-width: var(--container);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 32px;
+  padding-top: 32px;
+  border-top: 1px solid rgba(212, 165, 165, 0.3);
+}
+
+.citacao-box {
+  position: relative;
+  padding: 32px 28px;
+  border-left: 3px solid var(--rose);
+  background: rgba(74, 28, 38, 0.08);
+  transition: all 0.3s ease;
+}
+
+.citacao-box:hover {
+  background: rgba(74, 28, 38, 0.12);
+  transform: translateX(8px);
+}
+
+.citacao-texto {
+  font-family: var(--font-body);
+  font-style: italic;
+  font-size: 19px;
+  line-height: 1.8;
+  color: var(--ink);
+  margin: 0 0 20px;
+  font-weight: 500;
+}
+
+.citacao-autor {
+  font-family: var(--font-display);
+  font-size: 16px;
+  color: var(--wine-deep);
+  margin: 0;
+  font-weight: 600;
+}
+
+/* ===================== Music Player ===================== */
+
+.music-player {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: rgba(26, 58, 92, 0.95);
+  backdrop-filter: blur(8px);
+  padding: 12px 20px 12px 12px;
+  border-radius: 50px;
+  box-shadow: 0 8px 32px rgba(26, 58, 92, 0.3);
+  z-index: 999;
+}
+
+.music-player-btn {
+  background: var(--rose);
+  border: none;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+.music-player-btn:hover {
+  background: var(--rose-deep);
+  transform: scale(1.1);
+}
+
+.music-player-icon {
+  font-size: 20px;
+  color: white;
+  animation: float 1.2s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+}
+
+.music-player-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 120px;
+}
+
+.music-player-title {
+  font-family: var(--font-label);
+  font-size: 13px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gold-light);
+  margin: 0;
+  font-weight: 600;
+}
+
+.music-player-artist {
+  font-family: var(--font-body);
+  font-size: 12px;
+  color: var(--paper-dim);
+  margin: 0;
+}
+
+@media (max-width: 640px) {
+  .music-player {
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 14px 10px 10px;
+  }
+
+  .music-player-btn {
+    width: 40px;
+    height: 40px;
+  }
+
+  .music-player-info {
+    display: none;
+  }
+}
