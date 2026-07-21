@@ -1,7 +1,3 @@
-// =========================================================================
-// TODO: Edite tudo aqui. Este é o único arquivo que você precisa mexer
-// para trocar fotos, textos e mensagens — o resto do site se ajusta sozinho.
-// =========================================================================
 
 export const homenageada = {
   nome: "Mamãe",              // Nome dela (aparece em destaque no topo)
@@ -21,12 +17,12 @@ export const fotos = [
   { src: "public/foto-1.jpg", legenda: "Família cheia" },
   { src: "public/foto-2.jpg", legenda: "Um tempo passado" },
   { src: "public/foto-3.jpg", legenda: "Beleza pura" },
-  { src: "public/foto-4.jpg", legenda: "Vai tomando" },
-  { src: "public/foto-5.jpg", legenda: "teste" },
-  { src: "public/foto-6.jpg", legenda: "Anos 90 — sempre com aquele sorriso" }
+  { src: "public/foto-4.jpg", legenda: "Família simples e muito feliz" },
+  { src: "public/foto-5.jpg", legenda: "Amante de animais" },
+  { src: "public/foto-6.jpg", legenda: "Cafézinho com a Família" }
 ];
 
-// Mensagens/homenagens de quem quiser participar.
+// Mensagens/homenagens
 // Adicione um objeto para cada pessoa.
 export const mensagens = [
   {
@@ -60,7 +56,7 @@ export const convite = {
 };
 
 // Curiosidades sobre ela.
-// Adicione quantas quiser — a seção se ajusta automaticamente.
+
 export const curiosidades = [
   {
     titulo: "Leitora ávida",
@@ -84,7 +80,7 @@ export const curiosidades = [
   }
 ];
 
-// Citações e poemas que ela adora.
+// Citações e poemas
 // Adicione a citação, o autor, e deixe em branco se for dela mesma.
 export const citacoes = [
   {
@@ -120,3 +116,13 @@ export const musica = {
   artista: "Tom Cochrane",
   autoplay: false,
 };
+
+// Vídeos de parabéns.
+// Coloque os arquivos .mp4 em public/videos/
+// "src" = caminho do vídeo
+// "titulo" = nome/legenda do vídeo (opcional)
+// "poster" = imagem de capa (opcional - aparece antes de clicar em play)
+export const videos = [
+ { src: "public/video-1.mp4", titulo: "Karaokê Rick Astley", poster: "public/videos/thumbnail-1.jpg" },
+ { src: "public/video-1.mp4", titulo: "Saudades", poster: "public/videos/thumbnail-1.jpg" }
+];

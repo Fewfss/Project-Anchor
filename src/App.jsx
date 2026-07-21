@@ -1,5 +1,6 @@
 import Hero from "./components/Hero.jsx";
 import Galeria from "./components/Galeria.jsx";
+import Videos from "./components/Videos.jsx";
 import Curiosidades from "./components/Curiosidades.jsx";
 import Citacoes from "./components/Citacoes.jsx";
 import Mensagens from "./components/Mensagens.jsx";
@@ -14,6 +15,7 @@ export default function App() {
       <MusicPlayer />
       <Hero />
       <Galeria />
+      <Videos />
       <Curiosidades />
       <Citacoes />
       <Mensagens />
