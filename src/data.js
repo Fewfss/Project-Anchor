@@ -125,6 +125,6 @@ export const musica = {
 // "titulo" = nome/legenda do vídeo (opcional)
 // "poster" = imagem de capa (opcional - aparece antes de clicar em play)
 export const videos = [
- { src: '${PUBLIC_BASE}video-1.mp4', titulo: "Karaokê Rick Astley" },
- { src: '${PUBLIC_BASE}video-1.mp4', titulo: "Saudades" }
+ { src: `${PUBLIC_BASE}video-1.mp4`, titulo: "Karaokê Rick Astley" },
+ { src: `${PUBLIC_BASE}video-1.mp4`, titulo: "Saudades" }
 ];
