@@ -6,6 +6,8 @@ export const homenageada = {
 
 export const primeiroNome = homenageada.primeiroNome;
 
+const PUBLIC_BASE = import.meta.env.BASE_URL || "/";
+
 // Frase curta que aparece logo abaixo do nome, no topo do site.
 export const chamada =
   "Cinquenta anos de uma vida que inspira todos que passam por perto.";
@@ -14,12 +16,12 @@ export const chamada =
 // "src" é o caminho da imagem dentro de /fotos/ (coloque os arquivos lá).
 // "legenda" é o texto que aparece embaixo da foto.
 export const fotos = [
-  { src: "/foto-1.jpg", legenda: "Família cheia" },
-  { src: "/foto-2.jpg", legenda: "Um tempo passado" },
-  { src: "/foto-3.jpg", legenda: "Beleza pura" },
-  { src: "/foto-4.jpg", legenda: "Família simples e muito feliz" },
-  { src: "/foto-5.jpg", legenda: "Amante de animais" },
-  { src: "/foto-6.jpg", legenda: "Cafézinho com a Família" }
+  { src: `${PUBLIC_BASE}foto-1.jpg`, legenda: "Família cheia" },
+  { src: `${PUBLIC_BASE}foto-2.jpg`, legenda: "Um tempo passado" },
+  { src: `${PUBLIC_BASE}foto-3.jpg`, legenda: "Beleza pura" },
+  { src: `${PUBLIC_BASE}foto-4.jpg`, legenda: "Família simples e muito feliz" },
+  { src: `${PUBLIC_BASE}foto-5.jpg`, legenda: "Amante de animais" },
+  { src: `${PUBLIC_BASE}foto-6.jpg`, legenda: "Cafézinho com a Família" }
 ];
 
 // Mensagens/homenagens
@@ -111,7 +113,7 @@ export const citacoes = [
 // Coloque o arquivo MP3 em: public/musicas/
 export const musica = {
   type: "audio",
-  url: "/life-is-a-highway.mp3",
+  url: `${PUBLIC_BASE}life-is-a-highway.mp3`,
   titulo: "Life is a Highway",
   artista: "Tom Cochrane",
   autoplay: false,
@@ -123,6 +125,6 @@ export const musica = {
 // "titulo" = nome/legenda do vídeo (opcional)
 // "poster" = imagem de capa (opcional - aparece antes de clicar em play)
 export const videos = [
- { src: "/video-1.mp4", titulo: "Karaokê Rick Astley", poster: "/videos/thumbnail-1.jpg" },
- { src: "/video-1.mp4", titulo: "Saudades", poster: "/videos/thumbnail-1.jpg" }
+ { src: "/video-1.mp4", titulo: "Karaokê Rick Astley" },
+ { src: "/video-1.mp4", titulo: "Saudades" }
 ];
