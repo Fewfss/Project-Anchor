@@ -14,12 +14,12 @@ export const chamada =
 // "src" é o caminho da imagem dentro de /fotos/ (coloque os arquivos lá).
 // "legenda" é o texto que aparece embaixo da foto.
 export const fotos = [
-  { src: "public/foto-1.jpg", legenda: "Família cheia" },
-  { src: "public/foto-2.jpg", legenda: "Um tempo passado" },
-  { src: "public/foto-3.jpg", legenda: "Beleza pura" },
-  { src: "public/foto-4.jpg", legenda: "Família simples e muito feliz" },
-  { src: "public/foto-5.jpg", legenda: "Amante de animais" },
-  { src: "public/foto-6.jpg", legenda: "Cafézinho com a Família" }
+  { src: "/foto-1.jpg", legenda: "Família cheia" },
+  { src: "/foto-2.jpg", legenda: "Um tempo passado" },
+  { src: "/foto-3.jpg", legenda: "Beleza pura" },
+  { src: "/foto-4.jpg", legenda: "Família simples e muito feliz" },
+  { src: "/foto-5.jpg", legenda: "Amante de animais" },
+  { src: "/foto-6.jpg", legenda: "Cafézinho com a Família" }
 ];
 
 // Mensagens/homenagens
@@ -111,7 +111,7 @@ export const citacoes = [
 // Coloque o arquivo MP3 em: public/musicas/
 export const musica = {
   type: "audio",
-  url: "public/life-is-a-highway.mp3",
+  url: "/life-is-a-highway.mp3",
   titulo: "Life is a Highway",
   artista: "Tom Cochrane",
   autoplay: false,
@@ -123,6 +123,6 @@ export const musica = {
 // "titulo" = nome/legenda do vídeo (opcional)
 // "poster" = imagem de capa (opcional - aparece antes de clicar em play)
 export const videos = [
- { src: "public/video-1.mp4", titulo: "Karaokê Rick Astley", poster: "public/videos/thumbnail-1.jpg" },
- { src: "public/video-1.mp4", titulo: "Saudades", poster: "public/videos/thumbnail-1.jpg" }
+ { src: "/video-1.mp4", titulo: "Karaokê Rick Astley", poster: "/videos/thumbnail-1.jpg" },
+ { src: "/video-1.mp4", titulo: "Saudades", poster: "/videos/thumbnail-1.jpg" }
 ];
