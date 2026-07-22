@@ -29,14 +29,14 @@ export const fotos = [
 export const mensagens = [
   {
     autor: "Luis",
-    relacao: "seu filho",
+    relacao: "seu filho (favorito)",
     texto:
       "Mãe, cada conquista minha carrega um pouco da sua força. Feliz 50 anos — que venham muitos mais ao seu lado.",
   },
   {
-    autor: "Nome da pessoa",
-    relacao: "relação com ela",
-    texto: "Escreva aqui a homenagem.",
+    autor: "João",
+    relacao: "seu filho",
+    texto: "Oi, mãe. Eu sou seu filho, eu te ama muito pra todo sempre. ",
   },
   {
     autor: "Nome da pessoa",
@@ -48,13 +48,13 @@ export const mensagens = [
 // Detalhes do convite/festa.
 export const convite = {
   titulo: "Uma noite para celebrar",
-  data: "Sábado, 00 de mês de 2026",
+  data: "Sábado, 25 de fevereiro de 2026",
   horario: "19h00",
-  local: "Nome do local",
+  local: "Sua casa",
   endereco: "Endereço completo do local",
-  observacao: "Traje esporte fino. Confirme presença com a família.",
+  observacao: "Elegante. Confirme presença com a família.",
   rsvpTexto: "Confirmar presença",
-  rsvpLink: "https://wa.me/5500000000000", // link de WhatsApp, formulário, etc.
+  rsvpLink: "https://wa.me/5511999999999", // link de WhatsApp, formulário, etc.
 };
 
 // Curiosidades sobre ela.
